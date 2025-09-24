@@ -1,0 +1,51 @@
+name: pythagon
+description: A Flutter app for solving student math homework problems through photo capture and upload.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Camera functionality
+  camera: ^0.10.5+5
+  image_picker: ^1.0.4
+  
+  # File handling
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  
+  # Image display and manipulation
+  photo_view: ^0.14.0
+  
+  # Navigation
+  go_router: ^12.1.1
+  
+  # State management
+  provider: ^6.1.1
+  
+  # UI components
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Bold.ttf
+          weight: 700
