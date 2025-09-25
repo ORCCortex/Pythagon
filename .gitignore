@@ -5,9 +5,11 @@
 *.swp
 .DS_Store
 .atom/
+.build/
 .buildlog/
 .history
 .svn/
+.swiftpm/
 migrate_working_dir/
 
 # IntelliJ related
@@ -31,6 +33,10 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+**/build/
+build/
+*.dill
+*.cache.dill.track.dill
 
 # Symbolication related
 app.*.symbols
@@ -42,6 +48,13 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/build/
+**/android/build/
+**/android/.gradle/
+**/android/local.properties
+**/android/gradlew
+**/android/gradlew.bat
+**/android/gradle/
 
 # iOS related
 /ios/Flutter/flutter_export_environment.sh
@@ -49,9 +62,41 @@ app.*.map.json
 /ios/Flutter/Flutter.podspec
 /ios/Flutter/Generated.xcconfig
 /ios/Runner/GeneratedPluginRegistrant.*
+**/ios/build/
+**/ios/Pods/
+**/ios/Podfile.lock
+**/ios/.symlinks/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+
+# macOS related
+**/macos/build/
+**/macos/Pods/
+**/macos/Podfile.lock
+**/macos/.symlinks/
+**/macos/Flutter/ephemeral/
+**/macos/Flutter/Flutter-Debug.xcconfig
+**/macos/Flutter/Flutter-Release.xcconfig
+**/macos/Runner.xcworkspace/xcuserdata/
+**/macos/Runner.xcodeproj/xcuserdata/
+**/macos/Runner.xcodeproj/project.xcworkspace/xcuserdata/
 
 # Web related
 /web/
+
+# Windows related
+**/windows/build/
+**/windows/flutter/ephemeral/
+
+# Linux related
+**/linux/build/
+**/linux/flutter/ephemeral/
+
+# General build artifacts
+**/.fvm/
+**/coverage/
+**/.nyc_output/
+**/node_modules/
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
