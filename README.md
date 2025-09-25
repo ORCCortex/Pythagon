@@ -46,11 +46,12 @@ Detailed view of individual problems with zoom capabilities and problem manageme
    ```
 
 3. **Generate platform-specific code (if needed)**
+<!-- flutter create --platforms android,ios,web . -->
    ```bash
-   flutter create --platforms android,ios .
+   flutter create --platforms web .
    ```
 
-4. **Run the app**
+5. **Run the app**
    ```bash
    flutter run
    ```
