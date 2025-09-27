@@ -82,7 +82,7 @@ app.*.map.json
 **/macos/Runner.xcodeproj/project.xcworkspace/xcuserdata/
 
 # Web related
-/web/
+# /web/
 
 # Windows related
 **/windows/build/
