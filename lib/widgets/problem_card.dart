@@ -52,7 +52,7 @@ class ProblemCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         child: Image.file(
-          problem.imageFile,
+          problem.imageFile!,
           fit: BoxFit.cover,
           errorBuilder: (context, error, stackTrace) {
             return Container(
@@ -155,10 +155,16 @@ class ProblemCard extends StatelessWidget {
     switch (status) {
       case ProblemStatus.pending:
         return Icons.pending;
+      case ProblemStatus.processing:
+        return Icons.sync;
       case ProblemStatus.analyzing:
         return Icons.hourglass_top;
       case ProblemStatus.solved:
         return Icons.check_circle;
+      case ProblemStatus.completed:
+        return Icons.check_circle;
+      case ProblemStatus.failed:
+        return Icons.error;
       case ProblemStatus.error:
         return Icons.error;
     }
@@ -168,10 +174,16 @@ class ProblemCard extends StatelessWidget {
     switch (status) {
       case ProblemStatus.pending:
         return Colors.orange;
+      case ProblemStatus.processing:
+        return Colors.blue;
       case ProblemStatus.analyzing:
         return Colors.blue;
       case ProblemStatus.solved:
         return Colors.green;
+      case ProblemStatus.completed:
+        return Colors.green;
+      case ProblemStatus.failed:
+        return Colors.red;
       case ProblemStatus.error:
         return Colors.red;
     }
@@ -181,10 +193,16 @@ class ProblemCard extends StatelessWidget {
     switch (status) {
       case ProblemStatus.pending:
         return 'Pending';
+      case ProblemStatus.processing:
+        return 'Processing';
       case ProblemStatus.analyzing:
         return 'Analyzing';
       case ProblemStatus.solved:
         return 'Solved';
+      case ProblemStatus.completed:
+        return 'Completed';
+      case ProblemStatus.failed:
+        return 'Failed';
       case ProblemStatus.error:
         return 'Error';
     }

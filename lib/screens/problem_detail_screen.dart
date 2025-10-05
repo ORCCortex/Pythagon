@@ -639,9 +639,15 @@ class _ProblemDetailScreenState extends State<ProblemDetailScreen> {
         return Colors.orange;
       case ProblemStatus.processing:
         return Colors.blue;
+      case ProblemStatus.analyzing:
+        return Colors.purple;
+      case ProblemStatus.solved:
+        return Colors.teal;
       case ProblemStatus.completed:
         return Colors.green;
       case ProblemStatus.failed:
+        return Colors.red;
+      case ProblemStatus.error:
         return Colors.red;
     }
   }
@@ -652,10 +658,16 @@ class _ProblemDetailScreenState extends State<ProblemDetailScreen> {
         return Icons.schedule;
       case ProblemStatus.processing:
         return Icons.sync;
+      case ProblemStatus.analyzing:
+        return Icons.analytics;
+      case ProblemStatus.solved:
+        return Icons.check_circle_outline;
       case ProblemStatus.completed:
         return Icons.check_circle;
       case ProblemStatus.failed:
         return Icons.error;
+      case ProblemStatus.error:
+        return Icons.error_outline;
     }
   }
 
@@ -665,10 +677,16 @@ class _ProblemDetailScreenState extends State<ProblemDetailScreen> {
         return 'Pending';
       case ProblemStatus.processing:
         return 'Processing';
+      case ProblemStatus.analyzing:
+        return 'Analyzing';
+      case ProblemStatus.solved:
+        return 'Solved';
       case ProblemStatus.completed:
         return 'Completed';
       case ProblemStatus.failed:
         return 'Failed';
+      case ProblemStatus.error:
+        return 'Error';
     }
   }
 

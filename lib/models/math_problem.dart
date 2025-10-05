@@ -124,8 +124,11 @@ class Solution {
 enum ProblemStatus {
   pending,
   processing,
+  analyzing,
+  solved,
   completed,
   failed,
+  error,
 }
 
 enum SolutionStatus {

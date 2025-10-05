@@ -329,6 +329,16 @@ class HomeScreen extends StatelessWidget {
         text = 'Processing';
         icon = Icons.sync;
         break;
+      case ProblemStatus.analyzing:
+        color = Colors.purple;
+        text = 'Analyzing';
+        icon = Icons.analytics;
+        break;
+      case ProblemStatus.solved:
+        color = Colors.teal;
+        text = 'Solved';
+        icon = Icons.check_circle_outline;
+        break;
       case ProblemStatus.completed:
         color = Colors.green;
         text = 'Completed';
@@ -338,6 +348,11 @@ class HomeScreen extends StatelessWidget {
         color = Colors.red;
         text = 'Failed';
         icon = Icons.error;
+        break;
+      case ProblemStatus.error:
+        color = Colors.red;
+        text = 'Error';
+        icon = Icons.error_outline;
         break;
     }
 

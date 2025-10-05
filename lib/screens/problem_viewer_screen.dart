@@ -83,7 +83,7 @@ class ProblemViewerScreen extends StatelessWidget {
     return Container(
       color: Colors.black,
       child: PhotoView(
-        imageProvider: FileImage(problem.imageFile),
+        imageProvider: FileImage(problem.imageFile!),
         backgroundDecoration: const BoxDecoration(color: Colors.black),
         minScale: PhotoViewComputedScale.contained,
         maxScale: PhotoViewComputedScale.covered * 3,
@@ -184,10 +184,16 @@ class ProblemViewerScreen extends StatelessWidget {
     switch (status) {
       case ProblemStatus.pending:
         return Icons.pending;
+      case ProblemStatus.processing:
+        return Icons.sync;
       case ProblemStatus.analyzing:
         return Icons.hourglass_top;
       case ProblemStatus.solved:
         return Icons.check_circle;
+      case ProblemStatus.completed:
+        return Icons.check_circle;
+      case ProblemStatus.failed:
+        return Icons.error;
       case ProblemStatus.error:
         return Icons.error;
     }
@@ -197,10 +203,16 @@ class ProblemViewerScreen extends StatelessWidget {
     switch (status) {
       case ProblemStatus.pending:
         return Colors.orange;
+      case ProblemStatus.processing:
+        return Colors.blue;
       case ProblemStatus.analyzing:
         return Colors.blue;
       case ProblemStatus.solved:
         return Colors.green;
+      case ProblemStatus.completed:
+        return Colors.green;
+      case ProblemStatus.failed:
+        return Colors.red;
       case ProblemStatus.error:
         return Colors.red;
     }
@@ -210,10 +222,16 @@ class ProblemViewerScreen extends StatelessWidget {
     switch (status) {
       case ProblemStatus.pending:
         return 'Pending Analysis';
+      case ProblemStatus.processing:
+        return 'Processing...';
       case ProblemStatus.analyzing:
         return 'Analyzing...';
       case ProblemStatus.solved:
         return 'Solved';
+      case ProblemStatus.completed:
+        return 'Completed';
+      case ProblemStatus.failed:
+        return 'Failed';
       case ProblemStatus.error:
         return 'Error';
     }

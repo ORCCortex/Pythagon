@@ -178,3 +178,8 @@ For questions or issues, please create an issue in the GitHub repository.
 ---
 
 **Note**: This is a mobile client application template. Backend functionality for actual math problem solving would need to be implemented separately.
+
+
+
+email = 'test@example.com'
+password = 'testpassword123'
