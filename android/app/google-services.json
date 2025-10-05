@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "88053820539",
+    "project_id": "orccortex-543d1",
+    "storage_bucket": "orccortex-543d1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88053820539:android:29a11af68bd4444a9bc6de",
+        "android_client_info": {
+          "package_name": "com.example.pythagon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoupfWv5gh6CNGB3aCXSPOLeJN9iZ5Seg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
